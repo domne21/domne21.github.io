@@ -4,8 +4,8 @@ body {
 
 .test {
   border: 1px solid #000;
-  margin: 5px;
-  padding: 5px;
+  margin: 2px;
+  padding: 2px;
 }
 
 #content-wrap {
@@ -18,13 +18,12 @@ body {
 }
 #content {
   border-color: green;
-  padding-left: 30%;
+  padding: 10%;
 }
+
 #news {
-  width: 30%;
 }
 #contact {
-  width: 30%;
 }
 
 .page-block {
