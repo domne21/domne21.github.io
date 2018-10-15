@@ -1,13 +1,44 @@
 body {
   background-color: #f5f5f5f5;
 }
+
+.test {
+  border: 1px solid #000;
+  margin: 5px;
+  padding: 5px;
+}
+
+#content-wrap {
+  border-color: blue;
+}
+#left-sidebar {
+  width: 30%;
+  float: left;
+  border-color: red;
+}
+#content {
+  border-color: green;
+  padding-left: 30%;
+}
+#news {
+  width: 30%;
+}
+#contact {
+  width: 30%;
+}
+
 .page-block {
   background-color: darkgwhiteray;
-  padding: 10px;
+  padding: 24px;
   margins: 10px;
+  /* box shadow? */
+  border-raddius: 2px;
   border: 1px solid #777777;
 }
 
+#my-picture {
+  border-radius: 30px;
+}
 #motto {
   color: darkgreen;
 }
