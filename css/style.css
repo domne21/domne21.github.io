@@ -8,22 +8,18 @@ body {
   padding: 2px;
 }
 
-#content-wrap {
-  border-color: blue;
-}
-#left-sidebar {
-  width: 30%;
-  float: left;
-  border-color: red;
-}
-#content {
-  border-color: green;
-  padding: 10%;
+#header {
+  background-color: #334455;
+  border-color: #334455;
+  padding: 0px;
+  margins: 0px;
 }
 
-#news {
-}
-#contact {
+#footer {
+  background-color: #334455;
+  border-color: #334455;
+  padding: 0px;
+  margins: 0px;
 }
 
 .page-block {
@@ -38,6 +34,7 @@ body {
 #my-picture {
   border-radius: 30px;
 }
+
 #motto {
   color: darkgreen;
 }
