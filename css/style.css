@@ -8,6 +8,30 @@ body {
   padding: 2px;
 }
 
+.test0 {
+  border: 1px solid #000;
+  width: 800px;
+  margin: 0 auto;
+  background-color: rgb(238, 123, 123);
+}
+
+.test2 {
+  border: 1px solid #000;
+  margin: 2px;
+  width: 195px;
+  height: 400px;
+  background: darkgrey;
+  float: left;
+}
+
+.test3 {
+  border: 1px solid #000;
+  width: 595px;
+  background: #a2bbba;
+  height: 400px;
+  margin-left: 200px;
+}
+
 #header {
   background-color: #334455;
   border-color: #334455;
@@ -37,6 +61,10 @@ body {
 
 #motto {
   color: darkgreen;
+}
+
+#languages {
+  text-align: center;
 }
 
 #top-menu-bar {
