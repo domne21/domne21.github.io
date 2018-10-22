@@ -3,7 +3,7 @@ body {
 }
 
 .test {
-  border: 1px solid #000;
+  border: 1px solid rgb(145, 29, 29);
   margin: 2px;
   padding: 2px;
 }
