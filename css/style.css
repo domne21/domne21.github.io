@@ -57,7 +57,8 @@ body {
 }
 
 #motto {
-  color: darkgreen;
+  color: rgb(65, 87, 185);
+  font-weight: bold;
 }
 
 #languages {
