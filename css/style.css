@@ -10,26 +10,24 @@ body {
 
 .test0 {
   border: 1px solid #000;
-  width: 800px;
   margin: 0 auto;
   background-color: rgb(238, 123, 123);
 }
 
 .test2 {
   border: 1px solid #000;
-  margin: 2px;
-  width: 195px;
-  height: 400px;
+  width: 40%;
+  height: 150px;
   background: darkgrey;
   float: left;
 }
 
 .test3 {
   border: 1px solid #000;
-  width: 595px;
+  width: 60%;
   background: #a2bbba;
-  height: 400px;
-  margin-left: 200px;
+  height: 150px;
+  margin-left: 40%;
 }
 
 #header {
@@ -50,7 +48,6 @@ body {
   background-color: darkgwhiteray;
   padding: 24px;
   margins: 10px;
-  /* box shadow? */
   border-raddius: 2px;
   border: 1px solid #777777;
 }
