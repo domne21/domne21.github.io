@@ -1,68 +1,43 @@
 body {
-  background-color: #f5f5f5f5;
+  background-color: #f5f5f5;
 }
 
-.test {
-  border: 1px solid rgb(145, 29, 29);
-  margin: 2px;
-  padding: 2px;
+/* .test{
+  border: solid;
+} */
+.de-colorat {
+  color: #334455;
 }
-
-.test0 {
-  border: 1px solid #000;
-  margin: 0 auto;
-  background-color: rgb(238, 123, 123);
+#content-wrap {
+  border-color: #334455;
 }
-
-.test2 {
-  border: 1px solid #000;
-  width: 40%;
-  height: 150px;
-  background: darkgrey;
+#left-sidebar {
+  width: 30%;
   float: left;
+  border-color: red;
 }
 
-.test3 {
-  border: 1px solid #000;
-  width: 60%;
-  background: #a2bbba;
-  height: 150px;
-  margin-left: 40%;
+#content {
+  border-color: rgb(24, 216, 24);
+  padding-left: 30%;
 }
-
-#header {
-  background-color: #334455;
-  border-color: #334455;
-  padding: 0px;
-  margins: 0px;
-}
-
-#footer {
-  background-color: #334455;
-  border-color: #334455;
-  padding: 0px;
-  margins: 0px;
+#content div {
+  border-color: lightgreen;
 }
 
 .page-block {
-  background-color: darkgwhiteray;
+  background-color: white;
   padding: 24px;
-  margins: 10px;
-  border-raddius: 2px;
-  border: 1px solid #777777;
+  margin: 10px;
+  box-shadow: 0 0 0 1px rgba(0, 0, 0, 0.15), 0 2px 3px rgba(0, 0, 0, 0.2);
+  border-radius: 2px;
 }
-
 #my-picture {
-  border-radius: 30px;
+  border-radius: 50%;
 }
-
 #motto {
-  color: rgb(65, 87, 185);
+  color: 334455;
   font-weight: bold;
-}
-
-#languages {
-  text-align: center;
 }
 
 #top-menu-bar {
@@ -70,29 +45,30 @@ body {
   color: #fff;
   background-color: #334455;
 }
-
 #top-menu-bar li {
   margin: 0;
   padding: 0;
   display: inline;
 }
 #top-menu-bar a {
-  margin: 2px 0 2px 0;
-  color: ffffff;
   padding: 5px 15px 5px 15px;
+  margin: 2px 0 2px 0;
   text-decoration: none;
   display: inline-block;
+  color: #ffffff;
 }
-
 #top-menu-bar a:visited {
   color: #ffffff;
 }
-
 #top-menu-bar a:hover {
   color: #334455;
-  background: #fff;
+  background-color: #ffffff;
 }
 
 .favorite {
   font-weight: bold;
+}
+
+#footer {
+  clear: both;
 }
