@@ -1,13 +1,10 @@
 body {
   background-color: #f5f5f5;
 }
-
 /* .test{
   border: solid;
 } */
-.de-colorat {
-  color: #334455;
-}
+
 #content-wrap {
   border-color: #334455;
 }
@@ -35,6 +32,7 @@ body {
 #my-picture {
   border-radius: 50%;
 }
+
 #motto {
   color: 334455;
   font-weight: bold;
