@@ -22,6 +22,7 @@ function showHomePage() {
     hide("languages-page");    
     show("home-page") ;
 }
+
 $("home-menu").onclick = showHomePage;
 $("skills-menu").onclick = showSkillsPage;
 $("languages-menu").onclick = showLanguagesPage;
