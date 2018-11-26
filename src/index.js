@@ -36,19 +36,40 @@ function show(id) {
 // $("education-menu").onclick = showEducationPage;
 // $("languages-menu").onclick = showLanguagesPage;
 
+function hideElement(pages) {
+    pages.style.display = 'none';
+}
+
 function hideAllPages() {
     var pages = document.querySelectorAll(".page-block");
-    for(var i = 0; i < pages.length; i++) {
-    pages[i].style.display = "none";
+    pages.forEach(hideElement);
+    }
+
+
+function initMenu() {
+    var links = document.querySelectorAll("#top-menu-bar a");
+    for(var i = 0; i < links.length; i++) {
+        // console.log(links[i].getAttribute("data-page"), links[i]);
+        links[i].onclick = function() {
+            hideAllPages();
+            var page = this.getAttribute("data-page")
+            show(page + "-page");
+        }
     }
 }
-var links = document.querySelectorAll("#top-menu-bar a");
-for(var i = 0; i < links.length; i++) {
-    // console.log(links[i].getAttribute("data-page"), links[i]);
-    links[i].onclick = function() {
-        hideAllPages();
-        var page = this.getAttribute("data-page")
-        show(page + "-page");
-    };
+
+function initSkillsPage() {
+    var skills = ['js', 'html', 'css'];
+    var resultList = document.querySelector('#skills-page ul');
+
+   var listItems = skills.map(function(skill) {
+       return `<li>${skill.toUpperCase()}</li>`;
+   })
+
+    console.log('resulList:', listItems);
+    resultList.innerHTML = listItems.join('');
 }
-show("home-page");
+
+initMenu();
+show("skills-page");
+initSkillsPage();
