@@ -43,14 +43,14 @@ function hideElement(pages) {
 function hideAllPages() {
     var pages = document.querySelectorAll(".page-block");
     pages.forEach(hideElement);
-    }
+}
 
 
 function initMenu() {
     var links = document.querySelectorAll("#top-menu-bar a");
-    for(var i = 0; i < links.length; i++) {
+    for (var i = 0; i < links.length; i++) {
         // console.log(links[i].getAttribute("data-page"), links[i]);
-        links[i].onclick = function() {
+        links[i].onclick = function () {
             hideAllPages();
             var page = this.getAttribute("data-page")
             show(page + "-page");
@@ -59,12 +59,22 @@ function initMenu() {
 }
 
 function initSkillsPage() {
-    var skills = ['js', 'html', 'css'];
+    var skills = [
+        ['js', 7, 'Andrei'],
+        ['html', 6, ""],
+        ['css', 2, ""]
+    ];
     var resultList = document.querySelector('#skills-page ul');
 
-   var listItems = skills.map(function(skill) {
-       return `<li>${skill.toUpperCase()}</li>`;
-   })
+    var listItems = skills.map(function (skill) {
+        var endorsedBy = ' - Endorsed by';
+        if (skill[2] == "") {
+            endorsedBy = "";
+        }
+        var name = skill[0].toUpperCase();
+        return `<li>${name} <span style="color: grey">- ${skill[1]} ${endorsedBy} </span>
+        ${skill[2]}</li>`;
+    })
 
     console.log('resulList:', listItems);
     resultList.innerHTML = listItems.join('');
