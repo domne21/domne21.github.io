@@ -60,20 +60,20 @@ function initMenu() {
 
 function initSkillsPage() {
     var skills = [
-        ['js', 7, 'Andrei'],
-        ['html', 6, ""],
-        ['css', 2, ""]
+        {name: 'JS', endorsements: '7', endorsedBy:'Andrei'}, 
+        {name: 'html', endorsements: '6', endorsedBy:""}, 
+        {name: 'css', endorsements: '2', endorsedBy:""} 
     ];
     var resultList = document.querySelector('#skills-page ul');
 
     var listItems = skills.map(function (skill) {
         var endorsedBy = ' - Endorsed by';
-        if (skill[2] == "") {
+        if (skill.endorsedBy == "") {
             endorsedBy = "";
         }
-        var name = skill[0].toUpperCase();
-        return `<li>${name} <span style="color: grey">- ${skill[1]} ${endorsedBy} </span>
-        ${skill[2]}</li>`;
+        var name = skill.name.toUpperCase();
+        return `<li>${name} <span style="color: grey">- ${skill.endorsements} ${endorsedBy} </span>
+        ${skill.endorsedBy}</li>`;
     })
 
     console.log('resulList:', listItems);
