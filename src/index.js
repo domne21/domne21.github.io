@@ -76,4 +76,6 @@ function initSkillsPage() {
 
 initMenu();
 $("#skills-page").show();
+
+
 initSkillsPage();
