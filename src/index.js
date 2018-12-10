@@ -41,38 +41,45 @@
 
 
 function initMenu() {
-    var links = document.querySelectorAll("#top-menu-bar a");
-    for(var i = 0; i < links.length; i++) {
-      links[i].onclick = function(){
-        $('.page-block').hide();
-        var page = this.getAttribute('data-page');
-        $('#' + page + "-page").fadeIn();
-      };
-    }
+  var links = document.querySelectorAll("#top-menu-bar a");
+  for (var i = 0; i < links.length; i++) {
+    links[i].onclick = function () {
+      $('.page-block').hide();
+      var page = this.getAttribute('data-page');
+      $('#' + page + "-page").fadeIn();
+    };
   }
-  
-  function initSkillsPage() {
-    var skills = [
-      {name: 'js', endorsments: 7, endorsedBy: 'Andrei'},
-      {name: 'HTML', endorsments: 6, endorsedBy: ''},
-      {name: 'css', endorsments: 2, endorsedBy: ''}
-    ];
-    var resultList = document.querySelector('#skills-page ul');
-  
-    var listItems = skills.map(function(skill) {
-      var endorsedBy = ' - Endorsed by';
-      if (skill.endorsedBy == "") {
-        endorsedBy = "";
-      }
-      var name = skill.name.toUpperCase();
-      return `<li>${name}
+}
+
+function displaySkillS(skills) {
+  var resultList = document.querySelector('#skills-page ul');
+
+  var listItems = skills.map(function (skill) {
+    var endorsedBy = ' - Endorsed by';
+    if (skill.endorsedBy == "") {
+      endorsedBy = "";
+    }
+    var name = skill.name.toUpperCase();
+    return `<li>${name}
         <span style="color: gray">- ${skill.endorsments} ${endorsedBy}</span> 
         ${skill.endorsedBy}
         </li>`;
-    });
-    resultList.innerHTML = listItems.join('');
-  }
-  
-  initMenu();
-  $('#skills-page').show();
-  initSkillsPage();
+  });
+  resultList.innerHTML = listItems.join('');
+}
+
+function initSkillsPage() {
+  console.info('first step in initSkillsPage')
+  $.ajax('data/skill.json').done(function (skills) {
+    console.info('file data', skills);
+    displaySkillS(skills);
+  });
+  console.info('last step in initSkillsPage')
+}
+
+initMenu();
+$('#skills-page').show();
+
+console.info('1');
+initSkillsPage();
+console.info('2');
